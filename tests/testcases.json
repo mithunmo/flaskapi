@@ -1,0 +1,20 @@
+{ "inbound":[
+  { "testcase" : {"to":"4924195509198","from":"3253280312","text":"hello"}, "message" : "inbound sms ok" },
+  { "testcase" : { "to":"4924195509196","from":"13602092244","text":"hello world"}, "message" : "inbound sms ok" } ,
+  { "testcase" : { "to":"1111111","from":"13602092244","text":"hello world"}, "message" : "to parameter not found"},
+  { "testcase" : { "to":"1111","from":"13602092244","text":"hello world"} , "message" : "to is not valid"},
+  { "testcase" : { "to":"1111","text":"hello world"}, "message" : "from is missing"},
+  { "testcase" : { },"message" : "to is missing"},
+  { "testcase" : { "to":":!@#$%^&*()","from":"13602092244","text":"hello world"}, "message" : "to parameter not found"},
+  { "testcase" : { "to":":#$R@#!!@#@!\"\"#!@#!@","from":"13602092244","text":"hello world"}, "message" : "to is not valid"},
+  { "testcase" : { "to":"4924195509198","from":"3253280312","text":"STOP"}, "message" : "inbound sms ok"}
+],
+  "outbound" :[
+    { "testcase" : { "to":"4924195509198","from":"3253280312","text":"hello"} , "message" : "sms from 3253280312  to 4924195509198 blocked by STOP request" },
+    { "testcase" : { "to":"4924195509198","from":"3253280313","text":"hello"} , "message" : "outbound sms ok" , "count" : 50 },
+    { "testcase" : {"to":"4924195509198","from":"3253280313","text":"hello"} , "message" : "limit reached for from 3253280313" },
+    { "testcase" : {},  "message" : "to is missing" },
+    { "testcase" : {"to":"1111111111111225252525225","from":"3253280313","text":"hello"},  "message" : "to is not valid" },
+    { "testcase" : {"to":"1111111111111225252525225","from":"3253280313"},  "message" : "text is missing" }
+  ]
+}
