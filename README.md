@@ -20,10 +20,11 @@ API end points
 
 PACKAGES USED
 ========================================
-Install the following packages in the virtualenv  ( pip install -r requirements.txt)
+Install the following packages using Python 2.7.10  virtualenv  ( pip install -r requirements.txt)
 
 
-```appdirs==1.4.0
+```
+appdirs==1.4.0
 
 click==6.7
 
