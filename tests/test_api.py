@@ -59,7 +59,6 @@ class TestCase(unittest.TestCase):
         h.add('Authorization', 'Basic ' + base64.b64encode('mithun:p@ssword'))
         payload = {"to":"9886297837","from":"9886297837","text":"hello"}
         r = self.app.post('/outbound/sms',data=json.dumps(payload),content_type='application/json',headers=h)
-        print r.data
         r= json.loads(r.data)
         assert r["message"] == "outbound sms ok"
 
@@ -77,7 +76,6 @@ class TestCase(unittest.TestCase):
         h.add('Authorization', 'Basic ' + base64.b64encode('mithun:p@ssword'))
         payload = {"to":"9886297837","from":"9886297837","text":"hello"}
         r = self.app.post('/inbound/sms',data=json.dumps(payload),content_type='application/json',headers=h)
-        print r.data
         r= json.loads(r.data)
         assert r["message"] == "inbound sms ok"
 

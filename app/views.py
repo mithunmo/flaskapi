@@ -69,7 +69,6 @@ def outbound():
         abort(405)
     outputapi = APIOutput()
     try:
-        print request.data
         rr = json.loads(request.data)
         #check if the params are present
         check_param(rr)
