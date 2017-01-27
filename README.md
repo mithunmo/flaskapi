@@ -1,28 +1,24 @@
 
 FLASK APi
-======================================
+=======================================
 
 API end points
 =======================================
 
 1) /outbound/sms
-<br/>
+
 2) /inbound/sms
-<br/>
 
-
-<br/>
 1) The API can be accessed using HTTP basic authentication
-<br/>
+
 2) Only POST methods are allowed
-<br/>
+
 3) The API accepts json input and accepts to,from and text fields
-<br/>
 
 
 PACKAGES USED
 ========================================
-Install the following packages in the virtualenv
+Install the following packages in the virtualenv  ( pip install -r requirements.txt)
 
 
 appdirs==1.4.0
@@ -72,34 +68,32 @@ RUN the APP
 ============================================
 
 start the postgresql server with the test data
-<br/>
+
 start the redis
-<br/>
+
 python run.py
-<br/>
 
 
 
 TESTING
 ==========================================
 
-UNIT TESTING
-<br/>
-To run the unit testcases go to home folder of the flask app and execute
-<br/>
-pytest tests
-<br/>
+</b> UNIT TESTING </b>
 
-AUTOMATED TESTING
-<br/>
+To run the unit testcases go to home folder of the flask app and execute .
+It makes use of sqllite and mockredis to perform the tests
+
+pytest tests
+
+<b>AUTOMATED TESTING </b>
+
 All the testcases are defined in tests/testcases.json
-<br/>
-To run the  testcases go to tests folder and execute
-<br/>
+To run the  testcases go to tests folder and execute . This needs the postgresql server and redis server to be started .
+ Postgresql should have test dump data .
+
 python testautomation.py
-<br/>
+
 This outputs the number of testcases passed and failed based on the testcase message value
-<br/>
 
 
 
