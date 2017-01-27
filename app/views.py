@@ -40,10 +40,7 @@ def inbound():
         rr = json.loads(request.data)
         check_param(rr)
         check_valid(rr)
-        to_param = rr["to"]
-        from_param = rr["from"]
-        text_param = rr["text"]
-
+        to_param,from_param,text_param = rr["to"], rr["from"], rr["text"]
         account_id = Account.query.filter_by(username = auth.username()).first().id
         phnum = PhoneNumber.query.filter_by(account_id = account_id, number= to_param).first()
         if phnum is None:
@@ -77,9 +74,7 @@ def outbound():
         #check if the params are present
         check_param(rr)
         check_valid(rr)
-        to_param = rr["to"]
-        from_param = rr["from"]
-        text_param = rr["text"]
+        to_param, from_param, text_param = rr["to"],rr["from"],rr["text"]
         if current_app.redis_con.get(from_param) is None:
             current_app.redis_con.set(from_param,1)
             current_app.redis_con.expire(from_param, 24 * 3600)
