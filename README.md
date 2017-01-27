@@ -20,8 +20,8 @@ PACKAGES USED
 ========================================
 Install the following packages in the virtualenv  ( pip install -r requirements.txt)
 
-`
-appdirs==1.4.0
+
+`appdirs==1.4.0
 
 click==6.7
 
