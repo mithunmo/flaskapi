@@ -20,7 +20,7 @@ PACKAGES USED
 ========================================
 Install the following packages in the virtualenv  ( pip install -r requirements.txt)
 
-
+`
 appdirs==1.4.0
 
 click==6.7
@@ -61,7 +61,7 @@ SQLAlchemy==1.1.5
 
 Werkzeug==0.11.15
 
-wheel==0.24.0
+wheel==0.24.0`
 
 
 RUN the APP
@@ -71,7 +71,7 @@ start the postgresql server with the test data
 
 start the redis
 
-python run.py
+`python run.py`
 
 
 
@@ -83,7 +83,7 @@ TESTING
 To run the unit testcases go to home folder of the flask app and execute .
 It makes use of sqllite and mockredis to perform the tests
 
-pytest tests
+`pytest tests`
 
 <b>AUTOMATED TESTING </b>
 
@@ -91,7 +91,7 @@ All the testcases are defined in tests/testcases.json
 To run the  testcases go to tests folder and execute . This needs the postgresql server and redis server to be started .
  Postgresql should have test dump data .
 
-python testautomation.py
+`python testautomation.py`
 
 This outputs the number of testcases passed and failed based on the testcase message value
 
