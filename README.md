@@ -2,6 +2,12 @@
 FLASK API
 =======================================
 
+The API is developed using flask, redis and postgresql.
+
+SQLAlchemy is the ORM.
+
+pytest for running unit tests
+
 API end points
 =======================================
 
