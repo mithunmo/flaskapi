@@ -4,7 +4,7 @@ FLASK APi
 
 API end points
 =======================================
-
+```
 1) /outbound/sms
 
 2) /inbound/sms
@@ -14,6 +14,7 @@ API end points
 2) Only POST methods are allowed
 
 3) The API accepts json input and accepts to,from and text fields
+```
 
 
 PACKAGES USED
@@ -21,7 +22,7 @@ PACKAGES USED
 Install the following packages in the virtualenv  ( pip install -r requirements.txt)
 
 
-`appdirs==1.4.0
+```appdirs==1.4.0
 
 click==6.7
 
@@ -61,7 +62,7 @@ SQLAlchemy==1.1.5
 
 Werkzeug==0.11.15
 
-wheel==0.24.0`
+wheel==0.24.0```
 
 
 RUN the APP
