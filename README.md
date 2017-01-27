@@ -68,12 +68,13 @@ wheel==0.24.0
 RUN the APP
 ============================================
 
+```
 start the postgresql server with the test data
 
 start the redis
 
-`python run.py`
-
+python run.py
+```
 
 
 TESTING
