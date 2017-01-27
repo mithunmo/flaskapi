@@ -4,17 +4,18 @@ FLASK APi
 
 API end points
 =======================================
+
 ```
 1) /outbound/sms
 
 2) /inbound/sms
+```
 
 1) The API can be accessed using HTTP basic authentication
 
 2) Only POST methods are allowed
 
 3) The API accepts json input and accepts to,from and text fields
-```
 
 
 PACKAGES USED
@@ -80,7 +81,7 @@ python run.py
 TESTING
 ==========================================
 
-</b> UNIT TESTING </b>
+<b> UNIT TESTING </b>
 
 To run the unit testcases go to home folder of the flask app and execute .
 It makes use of sqllite and mockredis to perform the tests
