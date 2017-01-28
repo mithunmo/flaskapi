@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/mithunmo/flaskapi.svg?branch=master)](https://travis-ci.org/mithunmo/flaskapi)
+
 FLASK API
 =======================================
 
